@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title = current_page.data.title || 'Middleman'
+    = stylesheet_link_tag "main"
+
+  body
+    = yield
+    #preloader
+    /! Scripts
+    script data-main="/#{config.js_dir}/app" src="/#{config.js_dir}/lib/require.js"
